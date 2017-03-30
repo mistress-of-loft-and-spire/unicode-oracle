@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <meta name="description" content="a random unicode character generator">
+    <meta name="author" content="@notbanachtarski">
+	
+	<meta name="keywords" content="unicode, symbol, random, generator, character, icon, ascii, magic, code, html, text"/>
+
+    <title>the unicode oracle</title>
+	
+	<link rel="icon" href="favicon.ico">
+	<meta name="theme-color" content="#322340">
+
+    <!-- Theme CSS -->
+	<link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Intro Header -->
+    <div class="main" id="uni">
+		
+    </div>
+
+    <!-- Footer -->
+    <footer>
+		<a class="button" href="#" onclick="generate()">↺</a>
+    </footer>
+	
+	
+<script>
+
+document.body.className += ' fadein';
+
+generate();
+
+window.onload = function() {
+	body.removeClass(' fadein');
+}
+
+function generate() {
+
+	var string = "";
+	
+	var unicode =  "!#$%&()*+,'-./:;<=>?@[\]^_`{|}~¡¤¦§¨©ª«¬­®¯°±´µ¶·¿ǀǁǂˆˇˈˉˊˋˌˍˎˏːˑ˒˓˔˕˖˗˘˙˚˛˜˝˞˟ˠˡˢˣˤ˥˦˧˨˩˪˫ˬ˭ˮ˯˰˱˲˳˴˵˶˷˸˹˺˻˼˽҂҃҄҅҆҇҈҉֍߶߷༜྿࿏⁂፡።፣፤፥፦፧፨ᐁᖗᖘᖙᖚ†‡•‣․‥…‧⁘⁙⁚⁛⁓⁃⁄⁅⁆℻℞⅏∎∑⇠⇡⇢⇣∝∞∟∠∡∢∣∤∥∦∧∨∩∪∫⋆⊞⊟⊠⊡⊕⊖⊗⊘⊙⊚⊛⊶⊷⊸⌚⌛⌕⌖⎔⏄⏅⏢⏣⏹⏺⏳⏧⌬⌮⌲█░▒▘▙▤▥▦▧▨▩⬚◆◇◈◉◊○◌◍◎●◐◑▲△▴◓◔◕◖◗◘◙◚◛◜◝◞◟◠◡◢◣◤◥◦◧◨◩◪◫◬☀☁☂☃☄★☆☇☘☙☉☊☋☌☍☰☱☲☳☴☵☶☷ൠᴥῳῗ᧻ញᔱ፨෴໒ᅘ༼༽❽ᕯ❤௵ஔῧ☎⛺✔✘℮∏∆Ω∅≈⊥◉∰⋰⋱∶∷∴∵⋘⋙✿♺☼☸☔☕♪♫♚♛♜♝♞♟♠♣♥♦♨⚀⚁⚂⚃⚄⚅⚆⚇⚈⚉⚡⚖⚗⚘⚙⚚⚛⚑⚒⚓⚔⚿⚰⚱⚪⚫⛒⛓⛏⛅⛆✂⛼⛵✉✦✧✨✩❄❖⨯⬔⬕⬢⬣⬤⬟⬛⭐"
+	
+	for (i = 0; i < 15; i++){ 
+		
+		string += "<div class='char'>" + unicode[Math.floor(Math.random() * unicode.length)] + "&#xFE0E;</div>";
+		
+	}
+	
+	//string += String.fromCharCode(0x00AF) + "," + String.fromCharCode(0x001F) + "," + String.fromCharCode(0x001C) + "," + String.fromCharCode(0x001F);
+	
+	document.getElementById("uni").innerHTML = string;
+}
+
+</script>
+
+</body>
+
+</html>
